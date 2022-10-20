@@ -13,7 +13,17 @@ class Model:
     def __init__(self):
         self.stt_model = EncDecCTCModelBPE. \
                     from_pretrained(self.hf_model, map_location="cpu")
+        self.freeze_model()
+        
 
+    def freeze_model(self):
+        self.stt_model.preprocessor.featurizer.dither = 0.0
+        self.stt_model.preprocessor.featurizer.pad_to = 0
+        # Switch model to evaluation mode
+        self.stt_model.eval()
+        # Freeze the encoder and decoder modules
+        self.stt_model.encoder.freeze()
+        self.stt_model.decoder.freeze()
 
     def stt(self, audio_buffer: np.array, sr: int):
         audio_fp32 = self._to_float32(audio_buffer)
