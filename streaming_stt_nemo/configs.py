@@ -26,6 +26,7 @@
 # NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE,  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+
 languages = {
     "en": {
         "model": "stt_en_citrinet_512_gamma_0_25", 
