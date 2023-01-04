@@ -4,15 +4,16 @@ import torch
 
 from nemo.collections.asr.models import EncDecCTCModelBPE
 
+from .configs import languages
 
 
 class Model:
-    hf_model = "stt_en_citrinet_512_gamma_0_25"
+    langs = languages
 
 
-    def __init__(self):
+    def __init__(self, lang="en"):
         self.stt_model = EncDecCTCModelBPE. \
-                    from_pretrained(self.hf_model, map_location="cpu")
+                    from_pretrained(self.langs[lang], map_location="cpu")
         self.freeze_model()
         
 
