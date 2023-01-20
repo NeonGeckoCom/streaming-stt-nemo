@@ -14,7 +14,7 @@ class Model:
 
     def __init__(self, lang="en"):
         # OVOS uses 'en-us' so this hacks that to work until dialects are supported
-        lang = lang[:2]
+        lang = lang.split('-')[0]
         self.stt_model = EncDecCTCModelBPE. \
                     from_pretrained(self.langs[lang]["model"], map_location="cpu")
         self.freeze_model()
