@@ -3,7 +3,6 @@ import resampy
 import torch
 
 from nemo.collections.asr.models import EncDecCTCModelBPE
-from ovos_utils.log import LOG
 
 from .configs import languages
 
