@@ -3,6 +3,7 @@ import resampy
 import torch
 
 from nemo.collections.asr.models import EncDecCTCModelBPE
+from ovos_utils.log import LOG
 
 from .configs import languages
 
@@ -12,6 +13,8 @@ class Model:
 
 
     def __init__(self, lang="en"):
+        # OVOS uses 'en-us' so this hacks that to work until dialects are supported
+        lang = lang[:2]
         self.stt_model = EncDecCTCModelBPE. \
                     from_pretrained(self.langs[lang]["model"], map_location="cpu")
         self.freeze_model()
@@ -29,9 +32,10 @@ class Model:
     def stt(self, audio_buffer: np.array, sr: int):
         audio_fp32 = self._to_float32(audio_buffer)
         audio_16k = self._resample(audio_fp32, sr)
+        a16k_array = np.array([audio_16k])
 
         logits, logits_len, greedy_predictions = self.stt_model.forward(
-            input_signal=torch.tensor([audio_16k]), 
+            input_signal=torch.tensor(a16k_array),
             input_signal_length=torch.tensor([len(audio_16k)])
         )
 
