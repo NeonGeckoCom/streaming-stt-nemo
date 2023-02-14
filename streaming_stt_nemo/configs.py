@@ -43,4 +43,7 @@ languages = {
     "uk": {
         "model": "neongeckocom/stt_uk_citrinet_512_gamma_0_25", 
     },
+    "ca": {
+        "model": "neongeckocom/stt_ca_citrinet_512_gamma_0_25", 
+    },
 }
