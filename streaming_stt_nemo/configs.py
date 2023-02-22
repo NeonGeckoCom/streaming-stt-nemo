@@ -40,6 +40,9 @@ languages = {
     "de": {
         "model": "neongeckocom/stt_de_citrinet_512_gamma_0_25", 
     },
+    "it": {
+        "model": "neongeckocom/stt_it_citrinet_512_gamma_0_25", 
+    },
     "uk": {
         "model": "neongeckocom/stt_uk_citrinet_512_gamma_0_25", 
     },
