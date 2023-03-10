@@ -49,6 +49,9 @@ languages = {
     "nl": {
         "model": "neongeckocom/stt_nl_citrinet_512_gamma_0_25", 
     },
+    "pt": {
+        "model": "neongeckocom/stt_pt_citrinet_512_gamma_0_25", 
+    },
     "ca": {
         "model": "neongeckocom/stt_ca_citrinet_512_gamma_0_25", 
     },
