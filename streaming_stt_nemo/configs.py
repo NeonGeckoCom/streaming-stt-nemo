@@ -31,10 +31,28 @@ languages = {
     "en": {
         "model": "stt_en_citrinet_512_gamma_0_25", 
     },
+    "es": {
+        "model": "neongeckocom/stt_es_citrinet_512_gamma_0_25", 
+    },
     "fr": {
         "model": "stt_fr_citrinet_1024_gamma_0_25", 
     },
+    "de": {
+        "model": "neongeckocom/stt_de_citrinet_512_gamma_0_25", 
+    },
+    "it": {
+        "model": "neongeckocom/stt_it_citrinet_512_gamma_0_25", 
+    },
     "uk": {
         "model": "neongeckocom/stt_uk_citrinet_512_gamma_0_25", 
+    },
+    "nl": {
+        "model": "neongeckocom/stt_nl_citrinet_512_gamma_0_25", 
+    },
+    "pt": {
+        "model": "neongeckocom/stt_pt_citrinet_512_gamma_0_25", 
+    },
+    "ca": {
+        "model": "neongeckocom/stt_ca_citrinet_512_gamma_0_25", 
     },
 }

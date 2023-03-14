@@ -13,7 +13,7 @@ class Model:
 
     def __init__(self, lang="en"):
         self.stt_model = EncDecCTCModelBPE. \
-                    from_pretrained(self.langs[lang], map_location="cpu")
+                    from_pretrained(self.langs[lang]["model"], map_location="cpu")
         self.freeze_model()
         
 
