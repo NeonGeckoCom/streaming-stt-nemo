@@ -29,7 +29,7 @@
 
 languages = {
     "en": {
-        "model": "stt_en_citrinet_512_gamma_0_25", 
+        "model": "neongeckocom/stt_en_citrinet_512_gamma_0_25", 
     },
     "es": {
         "model": "neongeckocom/stt_es_citrinet_512_gamma_0_25", 
