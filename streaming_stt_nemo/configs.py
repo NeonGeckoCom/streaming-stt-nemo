@@ -29,13 +29,13 @@
 
 languages = {
     "en": {
-        "model": "stt_en_citrinet_512_gamma_0_25", 
+        "model": "neongeckocom/stt_en_citrinet_512_gamma_0_25", 
     },
     "es": {
         "model": "neongeckocom/stt_es_citrinet_512_gamma_0_25", 
     },
     "fr": {
-        "model": "stt_fr_citrinet_1024_gamma_0_25", 
+        "model": "neongeckocom/stt_fr_citrinet_512_gamma_0_25", 
     },
     "de": {
         "model": "neongeckocom/stt_de_citrinet_512_gamma_0_25", 
