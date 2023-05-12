@@ -1,5 +1,5 @@
 import numpy as np
-import resampy
+import soxr
 
 import ctypes, gc
 
@@ -94,7 +94,7 @@ class Model:
         gc.collect()
 
     def _resample(self, audio_fp32: np.array, sr: int):
-        audio_16k = resampy.resample(audio_fp32, sr, self.sample_rate)
+        audio_16k = soxr.resample(audio_fp32, sr, self.sample_rate)
         return audio_16k
 
     def _to_float32(self, audio_buffer: np.array):

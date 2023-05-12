@@ -3,6 +3,6 @@ torch
 onnxruntime
 sentencepiece
 # resampling
-resampy
+soxr
 # huggingface
 huggingface-hub
