@@ -13,6 +13,10 @@ from huggingface_hub import hf_hub_download
 from .configs import languages, sample_rate, subfolder_name
 
 
+
+available_languages = list(languages.keys())
+
+
 class Model:
     langs = languages
     sample_rate = sample_rate
@@ -116,3 +120,8 @@ class Model:
     def _to_float32(self, audio_buffer: np.array):
         audio_fp32 = np.divide(audio_buffer, np.iinfo(audio_buffer.dtype).max, dtype=np.float32)
         return audio_fp32
+
+
+
+
+__all__ = ["Model", "available_languages"]
