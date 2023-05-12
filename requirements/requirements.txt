@@ -4,5 +4,6 @@ onnxruntime
 sentencepiece
 # resampling
 soxr
+pydub
 # huggingface
 huggingface-hub

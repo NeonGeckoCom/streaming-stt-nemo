@@ -1,5 +1,6 @@
 import numpy as np
 import soxr
+from pydub import AudioSegment
 
 import ctypes, gc
 
@@ -84,6 +85,19 @@ class Model:
         self._trim_memory()
         return current_hypotheses
     
+    def stt_file(self, file_path: str):
+        audio_buffer, sr = self.read_file(file_path)
+        current_hypotheses = self.stt(audio_buffer, sr)
+        return current_hypotheses
+
+    def read_file(self, file_path: str):
+        audio_file = AudioSegment.from_file(file_path)
+        sr = audio_file.frame_rate
+
+        samples = audio_file.get_array_of_samples()
+        audio_buffer = np.array(samples)
+        return audio_buffer, sr
+
     @staticmethod
     def _trim_memory():
         """
