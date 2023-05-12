@@ -1,2 +1,8 @@
-nemo_toolkit[asr]
+# model
+torch
+onnxruntime
+sentencepiece
+# resampling
 resampy
+# huggingface
+huggingface-hub
