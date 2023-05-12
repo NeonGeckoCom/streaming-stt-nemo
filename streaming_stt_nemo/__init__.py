@@ -41,8 +41,10 @@ class Model:
         self.tokenizer = spm.SentencePieceProcessor(tokenizer_path)
 
     def _run_preprocessor(self, audio_16k: np.array):
+        input_signal = torch.tensor(audio_16k).unsqueeze(0)
+        length = torch.tensor(len(audio_16k)).unsqueeze(0)
         processed_signal, processed_signal_len = self.preprocessor.forward(
-            input_signal = torch.tensor([audio_16k]), length = torch.tensor([len(audio_16k)])
+            input_signal = input_signal, length = length
         )
         processed_signal = processed_signal.numpy()
         processed_signal_len = processed_signal_len.numpy()
