@@ -25,6 +25,7 @@ class Model:
         self._init_preprocessor(model_name)
         self._init_encoder(model_name)
         self._init_tokenizer(model_name)
+        self._trim_memory()
 
     def _init_preprocessor(self, model_name: str):
         preprocessor_path = hf_hub_download(model_name, "preprocessor.ts", subfolder=subfolder_name)
@@ -80,13 +81,21 @@ class Model:
         logits = self._run_encoder(processed_signal, processed_signal_len)
         current_hypotheses = self._run_tokenizer(logits)
 
+        self._trim_memory()
         return current_hypotheses
     
+    @staticmethod
+    def _trim_memory():
+        """
+        If possible, gives memory allocated by PyTorch back to the system
+        """
+        libc = ctypes.CDLL("libc.so.6")
+        libc.malloc_trim(0)
+        gc.collect()
 
     def _resample(self, audio_fp32: np.array, sr: int):
         audio_16k = resampy.resample(audio_fp32, sr, self.sample_rate)
         return audio_16k
-
 
     def _to_float32(self, audio_buffer: np.array):
         audio_fp32 = np.divide(audio_buffer, np.iinfo(audio_buffer.dtype).max, dtype=np.float32)
