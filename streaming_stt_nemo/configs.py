@@ -56,3 +56,9 @@ languages = {
         "model": "neongeckocom/stt_ca_citrinet_512_gamma_0_25", 
     },
 }
+
+
+sample_rate = 16000
+
+
+subfolder_name = "onnx"
