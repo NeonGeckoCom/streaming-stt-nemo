@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0](https://github.com/NeonGeckoCom/streaming-stt-nemo/tree/0.3.0) (2025-03-14)
+
+[Full Changelog](https://github.com/NeonGeckoCom/streaming-stt-nemo/compare/0.2.1a3...0.3.0)
+
+**Implemented enhancements:**
+
+- \[FEAT\] Update GitHub Automation [\#31](https://github.com/NeonGeckoCom/streaming-stt-nemo/issues/31)
+
 ## [0.2.1a3](https://github.com/NeonGeckoCom/streaming-stt-nemo/tree/0.2.1a3) (2025-03-14)
 
 [Full Changelog](https://github.com/NeonGeckoCom/streaming-stt-nemo/compare/0.2.1a2...0.2.1a3)
