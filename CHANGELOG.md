@@ -1,11 +1,12 @@
 # Changelog
 
-## [Unreleased](https://github.com/NeonGeckoCom/streaming-stt-nemo/tree/HEAD)
+## [0.2.1a2](https://github.com/NeonGeckoCom/streaming-stt-nemo/tree/0.2.1a2) (2025-03-14)
 
-[Full Changelog](https://github.com/NeonGeckoCom/streaming-stt-nemo/compare/0.2.0...HEAD)
+[Full Changelog](https://github.com/NeonGeckoCom/streaming-stt-nemo/compare/0.2.0...0.2.1a2)
 
 **Merged pull requests:**
 
+- Update `setup.py` and add build tests [\#34](https://github.com/NeonGeckoCom/streaming-stt-nemo/pull/34) ([NeonDaniel](https://github.com/NeonDaniel))
 - Update GitHub actions, license notices, and gitignore [\#33](https://github.com/NeonGeckoCom/streaming-stt-nemo/pull/33) ([NeonDaniel](https://github.com/NeonDaniel))
 - feat/accept model from path [\#29](https://github.com/NeonGeckoCom/streaming-stt-nemo/pull/29) ([JarbasAl](https://github.com/JarbasAl))
 
