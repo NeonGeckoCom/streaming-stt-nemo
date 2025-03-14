@@ -29,10 +29,10 @@
 from setuptools import setup, find_packages
 from os import path, getenv
 
-
+BASE_DIR = path.abspath(path.dirname(__file__))
 
 def get_requirements(requirements_filename: str):
-    requirements_file = path.join(path.abspath(path.dirname(__file__)), "requirements", requirements_filename)
+    requirements_file = path.join(BASE_DIR, "requirements", requirements_filename)
     with open(requirements_file, 'r', encoding='utf-8') as r:
         requirements = r.readlines()
     requirements = [r.strip() for r in requirements if r.strip() and not r.strip().startswith("#")]
@@ -49,7 +49,7 @@ def get_requirements(requirements_filename: str):
     return requirements
 
 
-with open("./version.py", "r", encoding="utf-8") as v:
+with open(path.join(BASE_DIR, "version.py"), "r", encoding="utf-8") as v:
     for line in v.readlines():
         if line.startswith("__version__"):
             if '"' in line:
@@ -61,6 +61,9 @@ with open("./version.py", "r", encoding="utf-8") as v:
 setup(
     name='streaming-stt-nemo',
     version=version,
+    author='Neongecko',
+    author_email='developers@neon.ai',
+    license='BSD-3.0',
     packages=find_packages(),
     python_requires='>3.7.0',
     install_requires=get_requirements("requirements.txt"),
