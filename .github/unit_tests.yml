@@ -1,0 +1,10 @@
+# This workflow will run unit tests
+
+name: Run Unit Tests
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  py_build_tests:
+    uses: neongeckocom/.github/.github/workflows/python_build_tests.yml@master
