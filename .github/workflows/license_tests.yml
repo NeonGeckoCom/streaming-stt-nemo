@@ -1,0 +1,9 @@
+name: Run License Tests
+on:
+  # TODO: re-enable after troubleshooting dependencies (https://github.com/NeonGeckoCom/neon-stt-plugin-nemo/actions/runs/4418988018/jobs/7746831407)
+#  push:
+  workflow_dispatch:
+
+jobs:
+  license_tests:
+    uses: neongeckocom/.github/.github/workflows/license_tests.yml@master
