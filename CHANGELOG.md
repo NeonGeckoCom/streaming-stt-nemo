@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.1a3](https://github.com/NeonGeckoCom/streaming-stt-nemo/tree/0.2.1a3) (2025-03-14)
+
+[Full Changelog](https://github.com/NeonGeckoCom/streaming-stt-nemo/compare/0.2.1a2...0.2.1a3)
+
+**Merged pull requests:**
+
+- Remove invalid Docker automation [\#35](https://github.com/NeonGeckoCom/streaming-stt-nemo/pull/35) ([NeonDaniel](https://github.com/NeonDaniel))
+
 ## [0.2.1a2](https://github.com/NeonGeckoCom/streaming-stt-nemo/tree/0.2.1a2) (2025-03-14)
 
 [Full Changelog](https://github.com/NeonGeckoCom/streaming-stt-nemo/compare/0.2.0...0.2.1a2)
